@@ -25,24 +25,6 @@
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- Your custom music file (`.mp3`, `.wav`, or `.ogg`)
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/manis-sharma/impress-your-crush/
-cd impress-your-crush
-```
-
-2. Add your music file to the project folder and name it `music` (e.g., `music.mp3`)
-
-3. Open `index.html` in your web browser
-
-That's it! No build tools or dependencies needed. 🎉
-
 ## 📁 Project Structure
 
 ```
@@ -57,11 +39,6 @@ romantic-proposal/
 ```
 
 ## 🎯 How It Works
-
-### Step 1: Photo Upload 📸
-- Upload or select 4 special photos
-- See animated previews with smooth transitions
-- Photos appear with zoom and rotation effects
 
 ### Step 2: Love Messages 💌
 - Read personalized love messages that appear one by one
@@ -212,28 +189,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Inspired by romance and creativity
 - Designed for unforgettable experiences
 
-## 📧 Contact & Support
-
-- 🌐 Portfolio: [manishsharma](https://www.manishsharma0.com.np/)
-
-- 💻 GitHub: [manis-sharma](https://github.com/manis-sharma/impress-your-crush/)
-
-- 📺 YouTube: [themanishcodes](https://www.youtube.com/@themanishcodes)
-
-- 📧 Email: manish.234th@gmail.com
-
-
----
-
 ## 🎉 Make It Special
 
 This project is meant to create an unforgettable moment. Customize it, personalize it, and make it uniquely yours. Love is all about the details! 💕
 
 ### Share Your Love Story!
 If you use this for your special moment, we'd love to hear about it! Drop a star ⭐ if you find this useful, and feel free to share how you customized it.
-
----
-
-**Made with 💖 by [Manish Sharma]**
-
-*"Every great love story needs a beautiful beginning."*
