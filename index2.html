@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weekly Inspiration Cards</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #0f172a, #1e3a8a);
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: #fcd34d;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+        width: 90%;
+        max-width: 1000px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+
+      .card.locked {
+        background: rgba(255, 255, 255, 0.05);
+        filter: blur(8px) brightness(0.7);
+        pointer-events: none;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .day {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #fcd34d;
+        margin-bottom: 10px;
+      }
+
+      .text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #e0e7ff;
+      }
+
+      .lock {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.2rem;
+        color: #94a3b8;
+      }
+
+      footer {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 1.4rem;
+        }
+        .card {
+          padding: 16px;
+        }
+        .day {
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Your Week of Strength 🌸</h1>
+    <div class="cards" id="cards"></div>
+
+    <footer>Each day, one card unlocks — a new reason to smile 💛</footer>
+
+    <script>
+      const messages = [
+        {
+          day: "Monday",
+          text: "Hey warrior, it’s Monday — not a monster. You’ve slayed worse things, like bad Wi-Fi and mood swings. 💪😉",
+        },
+        {
+          day: "Tuesday",
+          text: "You’re still standing — even your tired version is powerful. One step, one smile, one tea at a time. ☕🌿",
+        },
+        {
+          day: "Wednesday",
+          text: "Halfway through! You’re basically the main character now. Take a deep breath, drama queen — you’re doing fine. 🎬💖",
+        },
+        {
+          day: "Thursday",
+          text: "The week’s heavy, I know — but so is your courage. Let’s just survive with snacks and sass. 🍫😌",
+        },
+        {
+          day: "Friday",
+          text: "You made it! No medals, just peace. Dance a little, laugh a lot — your heart deserves a break. 💃✨",
+        },
+        {
+          day: "Saturday",
+          text: "Rule of the weekend: No guilt for resting. Healing counts as progress too. Sleep like it’s your job. 😴🌸",
+        },
+        {
+          day: "Sunday",
+          text: "Let go of the week. You did enough. You are enough. Tomorrow will thank you for this softness. ☀️💛",
+        },
+      ];
+
+      const todayIndex = new Date().getDay(); // 0 = Sunday
+      const cardsContainer = document.getElementById("cards");
+
+      messages.forEach((msg, index) => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        if (!((todayIndex === 0 && index === 6) || index < todayIndex)) {
+          card.classList.add("locked");
+          const lock = document.createElement("div");
+          lock.className = "lock";
+          lock.innerHTML = "🔒";
+          card.appendChild(lock);
+        }
+
+        const day = document.createElement("div");
+        day.className = "day";
+        day.textContent = msg.day;
+        const text = document.createElement("div");
+        text.className = "text";
+        text.textContent = msg.text;
+
+        card.appendChild(day);
+        card.appendChild(text);
+        cardsContainer.appendChild(card);
+      });
+    </script>
+  </body>
+</html>
